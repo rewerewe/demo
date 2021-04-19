@@ -1,0 +1,217 @@
+/* Google Web Font : Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Manrope:300,400,500,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+
+/* FontAwesome CDN 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Noto Sans KR', 'Open Sans', 'Montserrat', sans-serif;
+    color: #222;
+    font-size: 15px;
+    height: 100vh;
+    background-color: #fff;
+    margin: 8px;
+}
+
+.wrap-style {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+
+.searchContainer {
+    display: block;
+    position: absolute;
+    width: 392px;
+    height: auto;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: none;
+    overflow: unset;
+    top: 13px;
+    left: 6px;
+    margin-left: 0;
+    z-index: 1;
+}
+
+.mobileMenu {
+    display: none;
+}
+
+.trigger {
+    display: none;
+}
+
+/* Search Bar */
+.searchBar {
+    position: relative;
+    width: 392px;
+    height: 48px;
+    background: #fff;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    padding: 12px 30px 11px 20px;
+    z-index: 10;
+}
+
+.trigger {
+    display: block;
+    width: 24px;
+    height: 14px;
+    position: absolute;
+    top: 15px;
+}
+
+.trigger span {
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #000;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.trigger span:nth-child(1) {
+    top: 0;
+}
+
+.trigger span:nth-child(2) {
+    top: 50%;
+    width: 100%;
+}
+
+.trigger span:nth-child(3) {
+    top: 100%;
+}
+
+/* Menu Bar */
+.menuBox {
+    display: block;
+    position: static;
+    width: 100%;
+    border-top: 1px solid #eee;
+    border-radius: 0 0 3px 3px;
+    -webkit-border-radius: 0 0 3px 3px;
+    -moz-border-radius: 0 0 3px 3px;
+    -ms-border-radius: 0 0 3px 3px;
+    -o-border-radius: 0 0 3px 3px;
+    padding: 10px;
+    z-index: 2;
+}
+
+.menuBox ul {
+    display: flex;
+    height: 70px;
+}
+
+.menuBox ul li {
+    width: 25%;
+    font-size: 13.5px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 35px;
+}
+
+.menuBox ul li a i {
+    padding: 15px 0 7px 0;
+}
+
+/* .menuBox ul li:first-child {
+    display: none;
+} */
+
+/* ############################## page.html > contents ############################## */
+section.dashboard {
+    width: 100%;
+    padding: 100px 0 20px;
+}
+
+.inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0px 10px;
+}
+
+.contents-wrap {
+    margin: 0 auto;
+    border: 1px solid #000;
+    background-color: #f8f8;
+    /* dashboard > padding 제외해줌*/
+    height: calc(100vh - 180px);
+}
+
+.contents-wrap h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* parent */
+.contents01 {
+    width: 66.666%;
+    height: 100%;
+    background-color: #00b894;
+    position: relative;
+    float: left;
+}
+
+.contents02 {
+    width: 33.333%;
+    float: left;
+    position: relative;
+}
+
+.contents02>div {
+    height: 50%;
+    position: relative;
+}
+
+.subcontents01 {
+    background-color: #fab1a0;
+}
+
+.subcontents02 {
+    background-color: #b2bec3;
+}
+
+/* contents-align-center */
+.weather-heading,
+.health-heading,
+.disease-heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}

@@ -1,0 +1,73 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Demo</title>
+    <link type='text/css' rel='stylesheet' href='https://dev.vng.co.kr/soda/build/ol.css'>
+    <link type='text/css' rel='stylesheet' href='https://dev.vng.co.kr/soda/build/soda.css'>
+    <link type='text/css' rel='stylesheet' href='reset.css'>
+    <link type='text/css' rel='stylesheet' href='style.css'>
+    <link type='text/css' rel='stylesheet' href='responsive.css'>
+
+    <script src="common/js/jquery-2.1.4.js"></script>
+    <script src="https://kit.fontawesome.com/40125fc65a.js" crossorigin="anonymous"></script>
+    <script src='https://dev.vng.co.kr/soda/build/thirdparty/compatibility-min.js'></script>
+    <script src='https://dev.vng.co.kr/soda/build/thirdparty/proj4js/proj4.js'></script>
+    <script src='https://dev.vng.co.kr/soda/build/soda.js'></script>
+    <script src='app.js'></script>
+    
+</head>
+<body>
+    <header>
+        <div class="gnb-inner">
+            <div class="searchContainer">
+                <div class="searchBar">
+                    <div class="mobileBox">
+                        <div class="mobileMenu">
+                            <a href="#home">Home</a>
+                            <a href="#community">커뮤니티맵</a>
+                            <a href="#theme">테마맵</a>
+                            <a href="#info">인포맵</a>
+                            <a href="#life-info">생활정보</a>
+                        </div>
+                    </div>
+                    <div class="trigger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="menuBox">
+                    <div class="subMenuBox">
+                        
+                    </div>
+                    <ul class="menu">
+                        <li class="menu01">
+                            <a href="#home"><i class="fas fa-home 3x"></i><p>HOME</p></a>
+                        </li>
+                        <li class="menu02">
+                            <a href="#community"><i class="fas fa-vector-square 3x"></i><p>커뮤니티맵</p></a>
+                        </li>
+                        <li class="menu03">
+                            <a href="#theme"><i class="fas fa-map-signs 3x"></i><p>테마맵</p></a>
+                        </li>
+                        <li class="menu04">
+                            <a href="#info"><i class="fas fa-info 3x"></i><p>인포맵</p></a>
+                        </li>
+                        <li class="menu05">
+                            <a href="/page.html"><i class="far fa-thumbs-up 3x"></i><p>생활정보</p></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="map-wrap" class="wrap-style">
+        <div id="map" class="wrap-style"></div>
+    </div>
+</body>
+<script>
+    window.onload = init();
+</script>
+</html>
