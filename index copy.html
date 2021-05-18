@@ -22,14 +22,9 @@
     <header>
         <div class="gnb-inner">
             <div class="searchContainer">
-                <div class="searchBar">
-                    <div class="inputKeyword">
-                        <input type="text" placeholder="장소, 주소를 검색해주세요">
-                        <span class="serchIcon"><i class="fa fa-search"></i></span>
-                    </div>
+                <div class="headerBar">
                     <div class="mobileBox">
                         <div class="mobileMenu">
-                            <a href="#login">로그인</a>
                             <a href="#home">Home</a>
                             <a href="#community">커뮤니티맵</a>
                             <a href="#theme">테마맵</a>
@@ -43,12 +38,14 @@
                         <span></span>
                     </div>
                 </div>
+                <div class="searchBar">
+                    <input type="text" value="장소, 주소를 검색해주세요">
+                    <div class="mobileBox">
+                    </div>
+                </div>
                 <div class="menuBox">
-                    <div class="myPlaceBox">
-                        <p>안산생생지도</p>
-                        <div class="myPlace">
-                            <span>우리동네</span><span>상록구 안산천동로</span><button>위치변경</button>
-                        </div>
+                    <div class="subMenuBox">
+                        
                     </div>
                     <ul class="menu">
                         <li class="menu01">
@@ -68,53 +65,6 @@
                         </li>
                     </ul>
                 </div>
-            </div>
-            <div class="toolContainer">
-                <div class="tools">
-                    <button>연속지적도</button>
-                    <button class="tools-moblie-margin">도로명지도</button>
-                    <button>공시지가</button>
-                    <button class="web-only">토지이용계획</button>
-                    <button class="web-only"><i class="fa fa-ellipsis-h"></i></button>
-                </div>
-            </div>
-            <div class="mapContainer">
-                <!-- <ul>
-                    <li>일반지도</li>
-                    <li>항공지도</li>
-                    <li>드론지도</li>
-                    <li>로드뷰</li>
-                </ul> -->
-                <button><i class="fa fa-map"></i><br>일반지도</button>
-                <button class="web-only">항공지도</button>
-                <button class="web-only">드론지도</button>
-                <button class="web-only">로드뷰</button>
-            </div>
-            <div class="mapToolContainer">
-                <ul>
-                    <li class="staff-only">
-                        <button><i class="fas fa-layer-group"></i><p>레이어</p></button>
-                    </li>
-                    <li>
-                        <button>현위치</button>
-                    </li>
-                    <li class="web-only">
-                        <button><i class="fa fa-plus"></i></button>
-                        <button><i class="fa fa-minus"></i></button>
-                    </li>
-                    <li class="web-only">
-                        <button><p>측정</p></button>
-                    </li>
-                    <li class="web-only">
-                        <button><i class="fa fa-share-square-o"></i><p class="font-small">내보내기</p></button>
-                    </li>
-                    <li class="web-only staff-only">
-                        <button>사진</button>
-                    </li>
-                    <li class="web-only staff-only">
-                        <button>메모</button>
-                    </li>
-                </ul>
             </div>
         </div>
     </header>

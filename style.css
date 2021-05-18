@@ -22,6 +22,35 @@ a {
     text-decoration: none;
 }
 
+.active-block {
+    display: block !important;
+}
+
+.font-small {
+    font-size: 6px !important;
+}
+
+
+.staff-only {
+    display: none;
+}
+
+.mobile-only {
+    display: none;
+}
+
+/*********************************/
+/*          Mobile Menu         
+/*********************************/
+.mobileMenu {
+    display: none;
+}
+
+.trigger {
+    display: none;
+}
+
+/* ################################## index.html ################################## */
 body {
     font-family: 'Noto Sans KR', 'Open Sans', 'Montserrat', sans-serif;
     color: #222;
@@ -29,6 +58,21 @@ body {
     height: 100vh;
     background-color: #fff;
     margin: 8px;
+}
+
+header button {
+    border: none;
+    background-color: #fff;
+    color: #333;
+    font-size: 13.5px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
 }
 
 .wrap-style {
@@ -45,21 +89,66 @@ body {
     width: 392px;
     height: auto;
     background: #fff;
-    border-radius: 3px;
+    border-radius: 4px;
     box-shadow: none;
     overflow: unset;
     top: 13px;
     left: 6px;
     margin-left: 0;
     z-index: 1;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
 }
 
-.mobileMenu {
-    display: none;
+.toolContainer {
+    display: block;
+    position: absolute;
+    width: 450px;
+    height: 40px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: none;
+    overflow: unset;
+    top: 13px;
+    left: 410px;
+    margin-left: 0;
+    z-index: 1;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
 }
 
-.trigger {
-    display: none;
+.mapContainer {
+    display: block;
+    position: absolute;
+    /* width: 300px;
+    height: 50px; */
+    /* background: #fff; */
+    border-radius: 3px;
+    box-shadow: none;
+    overflow: unset;
+    top: 13px;
+    right: 10px;
+    margin-right: 0;
+    z-index: 1;
+}
+
+.mapToolContainer {
+    display: block;
+    position: absolute;
+    width: 50px;
+    /* height: 200px; */
+    /* background: #fff; */
+    border-radius: 3px;
+    box-shadow: none;
+    overflow: unset;
+    top: 60px;
+    right: 10px;
+    margin-right: 0;
+    z-index: 1;
 }
 
 /* Search Bar */
@@ -76,8 +165,25 @@ body {
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
-    padding: 12px 30px 11px 20px;
+    padding: 12px;
     z-index: 10;
+}
+
+.inputKeyword {
+    margin-left: 35px;
+}
+
+.inputKeyword input {
+    border: none;
+    width: 94%;
+}
+
+.serchIcon {
+    width: 24px;
+}
+
+.inputKeyword input::placeholder {
+    color: #cacaca
 }
 
 .trigger {
@@ -148,6 +254,36 @@ body {
 /* .menuBox ul li:first-child {
     display: none;
 } */
+
+/* Tools */
+.tools {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* Map Tools */
+.mapToolContainer ul li {
+    margin: 10px 0;
+}
+
+.mapToolContainer button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: #fff;
+    color: #333;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
 
 /* ############################## page.html > contents ############################## */
 section.dashboard {
