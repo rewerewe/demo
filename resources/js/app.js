@@ -31,6 +31,8 @@ function init() {
     map.zoomToExtentLonLat([126.8039377, 37.3123631, 126.8274553, 37.3294273]);
 
     trigger();
+
+    upSide();
 }
 
 /* Trigger */
@@ -66,4 +68,15 @@ function trigger() {
     //         $('header, .gototop').removeClass('active');
     //     }
     // })
+}
+
+function upSide() {
+    var mobileUpBtn = $('.up-side');
+    var testBox = $('.testBox');
+
+    mobileUpBtn.click(function () {
+        $(this).toggleClass('active');
+        testBox.toggleClass('active');
+    })
+
 }
