@@ -38,16 +38,17 @@ function trigger() {
     /* $(functuin(){ ~ }) 은 document.ready 와 동일함. 
     html을 다 읽고 ~ 코드를 실행해줘, 라는 의미임 */
     var mobileBtn = $('.trigger');
-    var mobileBox = $('.mobileBox');
+    var mobileSideBox = $('.mobileSideBox');
 
     mobileBtn.click(function () {
         $(this).toggleClass('active');
-        mobileBox.toggleClass('active');
+        $(this).toggleClass('move');
+        mobileSideBox.toggleClass('active');
     })
 
     $('section, .menu a').click(function () {
         mobileBtn.removeClass('active');
-        mobileBox.removeClass('active');
+        mobileSideBox.removeClass('active');
     })
 
     // /* Smooth Scrolling */

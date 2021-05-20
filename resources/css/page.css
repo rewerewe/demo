@@ -1,0 +1,137 @@
+/* ############################## page.html > contents ############################## */
+section.dashboard {
+    width: 100%;
+    padding: 100px 0 20px;
+}
+
+.inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0px 10px;
+}
+
+.contents-wrap {
+    margin: 0 auto;
+    border: 1px solid #000;
+    background-color: #f8f8;
+    /* dashboard > padding 제외해줌*/
+    height: calc(100vh - 180px);
+}
+
+.contents-wrap h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* parent */
+.contents01 {
+    width: 66.666%;
+    height: 100%;
+    background-color: #00b894;
+    position: relative;
+    float: left;
+}
+
+.contents02 {
+    width: 33.333%;
+    float: left;
+    position: relative;
+}
+
+.contents02>div {
+    height: 50%;
+    position: relative;
+}
+
+.subcontents01 {
+    background-color: #fab1a0;
+}
+
+.subcontents02 {
+    background-color: #b2bec3;
+}
+
+/* contents-align-center */
+.weather-heading,
+.health-heading,
+.disease-heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+
+/*************************************** 
+ * 태블릿 (가로 769 이상 ~ 1024px 이하)
+ ***************************************/
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .inner {
+        /* position: static; */
+        max-width: 100%;
+    }
+
+    .contents-wrap {
+        display: block;
+        position: static;
+        height: auto;
+        /* transform: translate(0);
+        -webkit-transform: translate(0);
+        -moz-transform: translate(0);
+        -ms-transform: translate(0);
+        -o-transform: translate(0);
+        top: 20px; */
+
+    }
+
+    .contents-wrap>div {
+        width: 100%;
+    }
+
+    .contents01 {
+        height: 70%;
+    }
+
+    .contents02>div {
+        width: 50%;
+        float: left;
+    }
+}
+
+
+/**************************** 
+ * 모바일 (가로 768px 이하)
+ ****************************/
+@media (max-width: 768px) {
+
+    .inner {
+        /* position: static; */
+        max-width: 100%;
+    }
+
+    .contents-wrap {
+        display: block;
+        position: static;
+        height: auto;
+        /* transform: translate(0);
+        -webkit-transform: translate(0);
+        -moz-transform: translate(0);
+        -ms-transform: translate(0);
+        -o-transform: translate(0);
+        top: 20px; */
+
+    }
+
+    .contents-wrap>div {
+        width: 100%;
+    }
+
+    .contents01 {
+        height: 70%;
+    }
+}

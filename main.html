@@ -6,17 +6,15 @@
     <title>Responsive Web Demo</title>
     <link type='text/css' rel='stylesheet' href='https://dev.vng.co.kr/soda/build/ol.css'>
     <link type='text/css' rel='stylesheet' href='https://dev.vng.co.kr/soda/build/soda.css'>
-    <link type='text/css' rel='stylesheet' href='reset.css'>
-    <link type='text/css' rel='stylesheet' href='style.css'>
-    <link type='text/css' rel='stylesheet' href='responsive.css'>
+    <link type='text/css' rel='stylesheet' href='common/css/reset.css'>
+    <link type='text/css' rel='stylesheet' href='resources/css/main.css'>
 
     <script src="common/js/jquery-2.1.4.js"></script>
     <script src="https://kit.fontawesome.com/40125fc65a.js" crossorigin="anonymous"></script>
     <script src='https://dev.vng.co.kr/soda/build/thirdparty/compatibility-min.js'></script>
     <script src='https://dev.vng.co.kr/soda/build/thirdparty/proj4js/proj4.js'></script>
     <script src='https://dev.vng.co.kr/soda/build/soda.js'></script>
-    <script src='app.js'></script>
-    
+    <script src='resources/js/app.js'></script>
 </head>
 <body>
     <header>
@@ -27,14 +25,39 @@
                         <input type="text" placeholder="장소, 주소를 검색해주세요">
                         <span class="serchIcon"><i class="fa fa-search"></i></span>
                     </div>
-                    <div class="mobileBox">
-                        <div class="mobileMenu">
-                            <a href="#login">로그인</a>
-                            <a href="#home">Home</a>
-                            <a href="#community">커뮤니티맵</a>
-                            <a href="#theme">테마맵</a>
-                            <a href="#info">인포맵</a>
-                            <a href="#life-info">생활정보</a>
+                    <div class="mobileSideBox">
+                        <div class="sideMenu">
+                            <a href="main.html">
+                                <span>안산생생지도</span>
+                            </a>
+                            <a href="login.html" class="side-login">
+                                <i class="fa fa-user-circle-o"></i>
+                                <span>로그인</span>
+                            </a>
+                            <a href="#home">
+                                <i class="fa fa-map-marker"></i>
+                                <span>지도홈</span>
+                            </a>
+                            <a href="#community">
+                                <i class="fa fa-joomla"></i>
+                                <span>커뮤니티맵</span>
+                            </a>
+                            <a href="#theme">
+                                <i class="fa fa-th-large"></i>
+                                <span>테마맵</span>
+                            </a>
+                            <a href="#info">
+                                <i class="fa fa-info-circle"></i>
+                                <span>인포맵</span>
+                            </a>
+                            <a href="#life-info">
+                                <i class="fa fa-sun-o"></i>
+                                <span>생활정보</span>
+                            </a>
+                            <a href="#notice">
+                                <i class="fa fa-bell-o"></i>
+                                <span>공지사항</span>
+                            </a>
                         </div>
                     </div>
                     <div class="trigger">
@@ -45,9 +68,13 @@
                 </div>
                 <div class="menuBox">
                     <div class="myPlaceBox">
-                        <p>안산생생지도</p>
-                        <div class="myPlace">
-                            <span>우리동네</span><span>상록구 안산천동로</span><button>위치변경</button>
+                        <div class="myPlace-title">
+                            <span>안산생생지도</span>
+                            <span><i class="fa fa-chevron-up"></i></span>
+                        </div>
+                        <div class="myPlace-addr">
+                            <span>우리동네: 상록구 안산천동로</span>
+                            <button>위치변경</button>
                         </div>
                     </div>
                     <ul class="menu">
@@ -85,7 +112,7 @@
                     <li>드론지도</li>
                     <li>로드뷰</li>
                 </ul> -->
-                <button><i class="fa fa-map"></i><br>일반지도</button>
+                <button><i class="fa fa-map"></i></button>
                 <button class="web-only">항공지도</button>
                 <button class="web-only">드론지도</button>
                 <button class="web-only">로드뷰</button>
@@ -96,7 +123,7 @@
                         <button><i class="fas fa-layer-group"></i><p>레이어</p></button>
                     </li>
                     <li>
-                        <button>현위치</button>
+                        <button><i class="fa fa-bullseye 3x"></i></button>
                     </li>
                     <li class="web-only">
                         <button><i class="fa fa-plus"></i></button>
