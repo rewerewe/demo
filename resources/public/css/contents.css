@@ -1,0 +1,41 @@
+.contents-none {
+  display: none;
+}
+
+.contents-block {
+    width: 100%;
+    height: calc(100vh - 36vh);
+		position: absolute;
+    padding: 12px 22px;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 0;
+}
+.search-title {}
+
+.search-category {}
+
+.search-addr-road {}
+
+.search-addr-admin {}
+
+.search-addr-tel {}
+
+.community-title {}
+
+.community-addr-road {}
+
+.community-img {}
+
+.community-userImg {}
+
+.community-userName {}
+
+.community-contents{}
+
+.community-like {}
+
+.community-reply {}
+
+community-share {}

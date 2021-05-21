@@ -6,15 +6,16 @@
     <title>Responsive Web Demo</title>
     <link type='text/css' rel='stylesheet' href='https://dev.vng.co.kr/soda/build/ol.css'>
     <link type='text/css' rel='stylesheet' href='https://dev.vng.co.kr/soda/build/soda.css'>
-    <link type='text/css' rel='stylesheet' href='common/css/reset.css'>
-    <link type='text/css' rel='stylesheet' href='resources/css/main.css'>
-
-    <script src="common/js/jquery-2.1.4.js"></script>
+    <link type='text/css' rel='stylesheet' href='resources/common/css/reset.css'>
+    <link type='text/css' rel='stylesheet' href='resources/public/css/main.css'>
+    <link type='text/css' rel='stylesheet' href='resources/public/css/contents.css'>
+    
+    <script src="resources/common/js/jquery-2.1.4.js"></script>
     <script src="https://kit.fontawesome.com/40125fc65a.js" crossorigin="anonymous"></script>
     <script src='https://dev.vng.co.kr/soda/build/thirdparty/compatibility-min.js'></script>
     <script src='https://dev.vng.co.kr/soda/build/thirdparty/proj4js/proj4.js'></script>
     <script src='https://dev.vng.co.kr/soda/build/soda.js'></script>
-    <script src='resources/js/app.js'></script>
+    <script src='resources/public/js/app.js'></script>
 </head>
 <body>
     <header>
@@ -34,27 +35,27 @@
                                 <i class="fa fa-user-circle-o"></i>
                                 <span>로그인</span>
                             </a>
-                            <a href="#home">
+                            <a href="#" class="home">
                                 <i class="fa fa-map-marker"></i>
                                 <span>지도홈</span>
                             </a>
-                            <a href="#community">
+                            <a href="#" class="communityMap">
                                 <i class="fa fa-joomla"></i>
                                 <span>커뮤니티맵</span>
                             </a>
-                            <a href="#theme">
+                            <a href="#" class="themeMap">
                                 <i class="fa fa-th-large"></i>
                                 <span>테마맵</span>
                             </a>
-                            <a href="#info">
+                            <a href="#" class="infoMap">
                                 <i class="fa fa-info-circle"></i>
                                 <span>인포맵</span>
                             </a>
-                            <a href="#life-info">
+                            <a href="#" class="lifeInfo">
                                 <i class="fa fa-sun-o"></i>
                                 <span>생활정보</span>
                             </a>
-                            <a href="#notice">
+                            <a href="#" class="notice">
                                 <i class="fa fa-bell-o"></i>
                                 <span>공지사항</span>
                             </a>
@@ -146,7 +147,7 @@
         </div>
     </header>
     <section>
-        <div class="dynamicBox">
+        <div id="dynamicBox" class="dynamicBox">
             <div class="testBox">
                 <div class="myPlaceBox">
                     <div class="myPlace-title">
@@ -158,55 +159,86 @@
                         <button>위치변경</button>
                     </div>
                 </div>
-                <div id="communityMap" class="communityMapContents">
-                    <ul>
-                        <li><span>[동네지도] 북경</span><span><button>상세보기</button></span><span><button>길찾기</button></span></li>
-                        <li><i class="fa fa-map-marker"></i><span>경기 안산시 단원구 화랑로 402</span></li>
-                        <li><img src="" alt=""></li>
-                        <li>sankim</li>
-                        <li><p>안산시청 앞 맛집 발견! 짜장면이 맛있네요. 맛있는 집은 같이 공유해야죠</p></li>
-                        <li><span>좋아요 2개</span><span>댓글 2개</span><span>공유하기</span></li>
-                    </ul>
-                    <ul>
-                        <li><span>[동네소식]시청 앞에 싱크홀 발생!</span><span><button>상세보기</button></span><span><button>길찾기</button></span></li>
-                        <li><i class="fa fa-map-marker"></i><span>경기 안산시 단원구 화랑로 402</span></li>
-                        <li><img src="" alt=""></li>
-                        <li>sankim</li>
-                        <li><p>안산시청 앞 싱크홀 발생</p></li>
-                        <li><span>좋아요 2개</span><span>댓글 2개</span><span>공유하기</span></li>
-                    </ul>
-                    <ul>
-                        <li><span>[동네지도] 북경</span><span><button>상세보기</button></span><span><button>길찾기</button></span></li>
-                        <li><i class="fa fa-map-marker"></i><span>경기 안산시 단원구 화랑로 402</span></li>
-                        <li><img src="" alt=""></li>
-                        <li>sankim</li>
-                        <li><p>안산시청 앞 맛집 발견! 짜장면이 맛있네요. 맛있는 집은 같이 공유해야죠</p></li>
-                        <li><span>좋아요 2개</span><span>댓글 2개</span><span>공유하기</span></li>
-                    </ul>
-                </div>
-                <div id="themeMap" class="themeMapContents"></div>
-                <div id="infoMap" class="infoMapContents"></div>
-                <div id="lifeInfo" class="lifeInfoContents"></div>
+                <div id="nowContents"></div>
+<!--                 <div id="home" class="home-style"></div>
+                <div id="communityMap" class="communityMap-style"></div>
+                <div id="themeMap" class="themeMap-style"></div>
+                <div id="infoMap" class="infoMap-style"></div>
+                <div id="lifeInfo" class="lifeInfo-style"></div> -->
             </div>
         </div>
+    </section>
+    <section id="home01" class="contents-none">
+      <ul>
+        <li>
+          <span class="search-title">안산종합여객자동차터미널</span>
+          <span class="search-category">버스터미널</span></li>
+        <li>
+          <p class="search-addr-road">경기 안산시 단원구 화랑로 402 단원구 화랑로 4</p>
+          <p class="search-addr-admin">(지번) 고잔동 527-8</p>
+          <p class="search-addr-tel">전화번호 : 031-411-0331</p>
+        </li>
+        <li><button>상세보기</button><button>길찾기</button></li>
+      </ul>
+    </section>
+    <section id="community02" class="contents-none">
+      <ul>
+          <li>
+            <span class="community-title">[동네지도] 북경</span>
+          </li>
+          <li>
+            <span class="community-addr-road">경기 안산시 단원구 화랑로 402</span>
+          </li>
+          <li>
+            <img src="" alt="" class="community-img">
+          </li>
+          <li>
+            <span><img src="" alt="" class="community-userImg"></span>
+            <span class="community-userName">안산시님</span>
+          </li>
+          <li>
+            <div class="community-contents">안산시청 앞 맛집 발견! 짜장면이 맛있네요. 맛있는 집은 같이 공유해야죠</div>
+          </li>
+          <li>
+            <span class="community-like">좋아요 2개</span>
+            <span class="community-reply">댓글 2개</span>
+            <span class="community-share">공유하기</span>
+          </li>
+      </ul>
+      <ul>
+          <li><span>[동네소식]시청 앞에 싱크홀 발생!</span><span><button>상세보기</button></span><span><button>길찾기</button></span></li>
+          <li><i class="fa fa-map-marker"></i><span>경기 안산시 단원구 화랑로 402</span></li>
+          <li><img src="" alt=""></li>
+          <li>sankim</li>
+          <li><p>안산시청 앞 싱크홀 발생</p></li>
+          <li><span>좋아요 2개</span><span>댓글 2개</span><span>공유하기</span></li>
+      </ul>
+      <ul>
+          <li><span>[동네지도] 북경</span><span><button>상세보기</button></span><span><button>길찾기</button></span></li>
+          <li><i class="fa fa-map-marker"></i><span>경기 안산시 단원구 화랑로 402</span></li>
+          <li><img src="" alt=""></li>
+          <li>sankim</li>
+          <li><p>안산시청 앞 맛집 발견! 짜장면이 맛있네요. 맛있는 집은 같이 공유해야죠</p></li>
+          <li><span>좋아요 2개</span><span>댓글 2개</span><span>공유하기</span></li>
+      </ul>
     </section>
     <section>
         <div class="menuBox">
             <ul class="menu">
-                <li class="menu01">
-                    <a href="#home"><i class="fas fa-home 3x"></i><p>HOME</p></a>
+                <li class="menu01" data-id="home01">
+                    <a href="#"><i class="fas fa-home 3x"></i><p>HOME</p></a>
                 </li>
-                <li class="menu02">
-                    <a href="#community"><i class="fas fa-vector-square 3x"></i><p>커뮤니티맵</p></a>
+                <li class="menu02" data-id="community02">
+                    <a href="#"><i class="fas fa-vector-square 3x"></i><p>커뮤니티맵</p></a>
                 </li>
-                <li class="menu03">
-                    <a href="#theme"><i class="fas fa-map-signs 3x"></i><p>테마맵</p></a>
+                <li class="menu03" data-id="contents03">
+                    <a href="#"><i class="fas fa-map-signs 3x"></i><p>테마맵</p></a>
                 </li>
-                <li class="menu04">
-                    <a href="#info"><i class="fas fa-info 3x"></i><p>인포맵</p></a>
+                <li class="menu04" data-id="contents04">
+                    <a href="#"><i class="fas fa-info 3x"></i><p>인포맵</p></a>
                 </li>
-                <li class="menu05">
-                    <a href="page.html"><i class="far fa-thumbs-up 3x"></i><p>생활정보</p></a>
+                <li class="menu05" data-id="contents05">
+                    <a href="#"><i class="far fa-thumbs-up 3x"></i><p>생활정보</p></a>
                 </li>
             </ul>
         </div>
@@ -216,6 +248,32 @@
     </div>
 </body>
 <script>
-    window.onload = init();
+   $(document).ready(function() {
+
+      window.onload = init();
+      
+      $('.menuBox ul li').on('click', function(e){
+        var $target = $(this);
+        var id = $target.data('id');
+        var $nowContents = $('#nowContents'); 
+
+        var $contentsID= $('#'+id);
+
+        $nowContents.html('');
+        $nowContents.html($contentsID);
+        
+        console.log($contentsID);
+        if ($contentsID.hasClass('contents-none')) {
+          $contentsID.removeClass('contents-none');
+          $contentsID.addClass('contents-block');                
+        } 
+        /* if ($contentsID.hasClass('contents-block')) {
+          $contentsID.removeClass('contents-block');                          
+          $contentsID.addClass('contents-none');
+        } */
+        
+      });
+      
+   });
 </script>
 </html>
